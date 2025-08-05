@@ -11,10 +11,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             quick-tap-ms = <180>;
-            require-prior-idle-ms = <0>;
+            require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
+            hold-while-undecided;
         };
     };
 
@@ -22,44 +23,44 @@
         compatible = "zmk,combos";
 
         lbracket {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <2 1>;
         };
 
         lpar {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <2 3>;
         };
 
         rbracket {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <7 8>;
         };
 
         rpar {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             bindings = <&kp RPAR>;
             key-positions = <7 6>;
         };
 
         tab {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             bindings = <&kp TAB>;
             key-positions = <13 14>;
         };
 
         esc {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             bindings = <&kp ESC>;
             key-positions = <14 12>;
         };
 
-        sqt {
-            timeout-ms = <20>;
-            bindings = <&kp SQT>;
+        semi {
+            timeout-ms = <30>;
+            bindings = <&kp SEMI>;
             key-positions = <19 18>;
         };
 
