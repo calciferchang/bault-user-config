@@ -33,12 +33,12 @@
 
         rbracket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <7 6>;
+            key-positions = <7 8>;
         };
 
         rpar {
             bindings = <&kp RPAR>;
-            key-positions = <7 8>;
+            key-positions = <7 6>;
         };
 
         tab {
@@ -103,7 +103,7 @@
             bindings = <
 &kp Q             &kp W           &kp E               &kp R           &kp T  &kp Y        &kp U           &kp I            &kp O                &kp P                        &tog 4
 &hm LEFT_SHIFT A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_GUI F  &kp G  &kp H        &hm LEFT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm LEFT_SHIFT SINGLE_QUOTE
-&mt LEFT_GUI Z    &kp X           &kp C               &kp V           &kp B  &kp N        &kp M           &kp COMMA        &kp PERIOD           &kp SLASH
+&hm LEFT_GUI Z    &kp X           &kp C               &kp V           &kp B  &kp N        &kp M           &kp COMMA        &kp PERIOD           &kp SLASH
 &kp N0            &mo 0           &kp ENTER           &lt 2 SPACE            &lt 1 ENTER                  &kp RIGHT_SHIFT  &mo 3                &kp N0
             >;
         };
@@ -111,7 +111,7 @@
         num {
             bindings = <
 &none                    &kp LS(LGUI)  &kp LBKT  &kp RBKT           &kp BACKSLASH  &none   &kp GRAVE  &kp MINUS  &kp EQUAL  &none               &none
-&hm LEFT_SHIFT NUMBER_1  &kp N2        &kp N3    &mt LEFT_SHIFT N4  &kp N5         &kp N6  &kp N7     &kp N8     &kp N9     &mt RIGHT_SHIFT N0
+&hm LEFT_SHIFT NUMBER_1  &kp N2        &kp N3    &hm LEFT_SHIFT N4  &kp N5         &kp N6  &kp N7     &kp N8     &kp N9     &hm RIGHT_SHIFT N0
 &kp LEFT_ALT             &none         &none     &none              &none          &none   &none      &trans     &trans     &trans
 &none                    &none         &none     &trans                            &trans             &trans     &none      &none
             >;
@@ -128,10 +128,10 @@
 
         connectivity {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
-&trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &out OUT_TOG  &trans
-&kp N0  &trans  &trans  &trans          &trans                      &trans        &trans        &kp N0
+&studio_unlock  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
+&trans          &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans
+&trans          &trans  &trans  &trans  &trans  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &out OUT_TOG  &trans
+&kp N0          &trans  &trans  &trans          &trans                      &trans        &trans        &kp N0
             >;
         };
 
