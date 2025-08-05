@@ -22,41 +22,49 @@
         compatible = "zmk,combos";
 
         lbracket {
+            timeout-ms = <20>;
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <2 1>;
         };
 
         lpar {
+            timeout-ms = <20>;
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <2 3>;
         };
 
         rbracket {
+            timeout-ms = <20>;
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <7 8>;
         };
 
         rpar {
+            timeout-ms = <20>;
             bindings = <&kp RPAR>;
             key-positions = <7 6>;
         };
 
         tab {
+            timeout-ms = <20>;
             bindings = <&kp TAB>;
             key-positions = <13 14>;
         };
 
         esc {
+            timeout-ms = <20>;
             bindings = <&kp ESC>;
             key-positions = <14 12>;
         };
 
         sqt {
+            timeout-ms = <20>;
             bindings = <&kp SQT>;
             key-positions = <19 18>;
         };
 
         bksp {
+            timeout-ms = <20>;
             bindings = <&kp BACKSPACE>;
             key-positions = <18 17>;
         };
