@@ -1,10 +1,9 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -19,36 +18,138 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        lbracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <2 1>;
+        };
+
+        lpar {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <2 3>;
+        };
+
+        rbracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <7 6>;
+        };
+
+        rpar {
+            bindings = <&kp RPAR>;
+            key-positions = <7 8>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <13 14>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <14 12>;
+        };
+
+        sqt {
+            bindings = <&kp SQT>;
+            key-positions = <19 18>;
+        };
+
+        bksp {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <18 17>;
+        };
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <34 11>;
+        };
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <12 34>;
+        };
+
+        paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <13 34>;
+        };
+
+        undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <34 14>;
+        };
+
+        connectivity {
+            bindings = <&mo 3>;
+            key-positions = <33 36>;
+        };
+    };
+
+    macros {
+        figma_text: figma_text {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &tog 0>;
+            label = "FIGMA_TEXT";
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-                &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P      &kp LEFT_BRACKET
-                &hm LEFT_CONTROL A  &hm LEFT_ALT S  &hm LGUI D  &hm LEFT_SHIFT F  &kp G      &kp H      &hm RIGHT_SHIFT J  &hm RIGHT_GUI K  &hm LEFT_ALT L  &hm RCTRL SEMICOLON
-                &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA      &kp PERIOD      &kp SLASH
-                &kp N0      &mo 3      &kp ENTER      &kp SPACE      &kp BACKSPACE      &mo 1      &mo 2      &kp N0
+&kp Q             &kp W           &kp E               &kp R           &kp T  &kp Y        &kp U           &kp I            &kp O                &kp P                        &tog 4
+&hm LEFT_SHIFT A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_GUI F  &kp G  &kp H        &hm LEFT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm LEFT_SHIFT SINGLE_QUOTE
+&mt LEFT_GUI Z    &kp X           &kp C               &kp V           &kp B  &kp N        &kp M           &kp COMMA        &kp PERIOD           &kp SLASH
+&kp N0            &mo 0           &kp ENTER           &lt 2 SPACE            &lt 1 ENTER                  &kp RIGHT_SHIFT  &mo 3                &kp N0
             >;
         };
 
-
-        layer_1 {
+        num {
             bindings = <
-                &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7    &kp N8    &kp N9     &kp N0     &studio_unlock
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp UP    &kp MINUS  &kp EQUAL
-                &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-                &kp N0   &trans  &trans  &trans  &trans  &trans    &trans &kp N0
+&none                    &kp LS(LGUI)  &kp LBKT  &kp RBKT           &kp BACKSLASH  &none   &kp GRAVE  &kp MINUS  &kp EQUAL  &none               &none
+&hm LEFT_SHIFT NUMBER_1  &kp N2        &kp N3    &mt LEFT_SHIFT N4  &kp N5         &kp N6  &kp N7     &kp N8     &kp N9     &mt RIGHT_SHIFT N0
+&kp LEFT_ALT             &none         &none     &none              &none          &none   &none      &trans     &trans     &trans
+&none                    &none         &none     &trans                            &trans             &trans     &none      &none
             >;
         };
 
+        nav {
+            bindings = <
+&trans            &kp HOME  &kp UP    &kp END    &trans  &kp F10  &kp F7  &kp F8  &kp F9  &trans  &trans
+&kp LEFT_GUI      &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans
+&kp LS(LEFT_GUI)  &trans    &trans    &trans     &trans  &kp F12  &kp F1  &kp F2  &kp F3  &trans
+&trans            &trans    &trans    &trans             &trans           &trans  &trans  &trans
+            >;
+        };
 
         connectivity {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
-                &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans
-                &trans  &trans  &trans  &trans  &trans  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &out OUT_TOG  &trans
-                &kp N0   &trans  &trans  &trans  &trans        &trans        &trans &kp N0
+&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
+&trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &out OUT_TOG  &trans
+&kp N0  &trans  &trans  &trans          &trans                      &trans        &trans        &kp N0
+            >;
+        };
+
+        design {
+            bindings = <
+&trans              &figma_text     &kp R           &kp K      &kp LBKT  &trans           &trans  &trans  &trans  &trans  &trans
+&lt 2 V             &mt LEFT_GUI A  &mt LEFT_ALT D  &kp O      &kp RBKT  &trans           &trans  &trans  &trans  &trans
+&mt LEFT_GUI SPACE  &trans          &kp MINUS       &kp EQUAL  &kp FSLH  &trans           &trans  &trans  &trans  &trans
+&trans              &trans          &trans          &mo 5                &kp RIGHT_SHIFT          &trans  &trans  &trans
+            >;
+        };
+
+        design_num {
+            bindings = <
+&trans        &kp N7  &kp N8  &kp N9  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &kp N4  &kp N4  &kp N5  &kp PG_UP      &trans  &trans  &trans  &trans  &trans
+&kp LEFT_GUI  &kp N1  &kp N2  &kp N3  &kp N0         &trans  &trans  &trans  &trans  &trans
+&trans        &trans  &trans  &trans                 &trans          &trans  &trans  &trans
             >;
         };
     };
