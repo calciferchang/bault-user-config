@@ -57,9 +57,9 @@
             key-positions = <14 12>;
         };
 
-        sqt {
+        semicolon {
             timeout-ms = <20>;
-            bindings = <&kp SQT>;
+            bindings = <&kp SEMI>;
             key-positions = <19 18>;
         };
 
