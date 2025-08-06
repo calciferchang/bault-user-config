@@ -22,25 +22,25 @@
         compatible = "zmk,combos";
 
         lbracket {
-            timeout-ms = <30>;
+            timeout-ms = <20>;
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <2 1>;
         };
 
         lpar {
-            timeout-ms = <30>;
+            timeout-ms = <20>;
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <2 3>;
         };
 
         rbracket {
-            timeout-ms = <30>;
+            timeout-ms = <20>;
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <7 8>;
         };
 
         rpar {
-            timeout-ms = <30>;
+            timeout-ms = <20>;
             bindings = <&kp RPAR>;
             key-positions = <7 6>;
         };
