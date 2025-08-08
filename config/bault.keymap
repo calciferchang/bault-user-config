@@ -114,19 +114,19 @@
 
         num {
             bindings = <
-&none         &kp LS(LGUI)  &kp LBKT  &kp RBKT  &kp BACKSLASH  &none   &kp GRAVE  &kp MINUS  &kp EQUAL  &none   &none
-&kp N1        &kp N2        &kp N3    &kp N4    &kp N5         &kp N6  &kp N7     &kp N8     &kp N9     &kp N0
-&sk LEFT_ALT  &sk LEFT_GUI  &none     &none     &none          &none   &none      &trans     &trans     &trans
-&none         &none         &none     &trans                   &trans             &trans     &none      &none
+&kp LS(EXCL)  &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)    &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp MINUS  &kp EQUAL  &none
+&kp N1        &kp N2        &kp N3         &kp N4          &kp N5         &kp N6         &kp N7        &kp N8        &kp N9     &kp N0
+&sk LEFT_ALT  &sk LEFT_GUI  &none          &none           &none          &none          &none         &trans        &trans     &trans
+&none         &none         &none          &sk LEFT_SHIFT                 &trans                       &trans        &none      &none
             >;
         };
 
         nav {
             bindings = <
-&trans    &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &none   &none      &none      &none     &trans    &trans
-&kp LEFT  &kp DOWN  &kp UP         &kp RIGHT  &sk ENTER  &none   &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI
-&sk ESC   &trans    &trans         &trans     &trans     &none   &none      &none      &none     &trans
-&trans    &trans    &trans         &trans                &trans             &trans     &trans    &trans
+&trans      &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &none   &none      &none      &none     &trans    &trans
+&kp LEFT    &kp DOWN  &kp UP         &kp RIGHT  &kp ENTER  &none   &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI
+&kp ESCAPE  &trans    &trans         &trans     &trans     &none   &none      &none      &none     &trans
+&trans      &trans    &trans         &trans                &trans             &trans     &trans    &trans
             >;
         };
 
