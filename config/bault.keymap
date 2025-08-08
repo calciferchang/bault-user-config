@@ -45,48 +45,36 @@
             key-positions = <7 6>;
         };
 
-        tab {
-            timeout-ms = <30>;
-            bindings = <&kp TAB>;
-            key-positions = <13 14>;
-        };
-
-        esc {
-            timeout-ms = <30>;
-            bindings = <&kp ESC>;
-            key-positions = <14 12>;
-        };
-
-        semi {
-            timeout-ms = <30>;
-            bindings = <&kp SEMI>;
-            key-positions = <19 18>;
-        };
-
-        bksp {
-            timeout-ms = <20>;
-            bindings = <&kp BACKSPACE>;
-            key-positions = <18 17>;
-        };
-
         copy {
             bindings = <&kp LG(C)>;
             key-positions = <34 11>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <10>;
+            layers = <0>;
         };
 
         cut {
             bindings = <&kp LG(X)>;
             key-positions = <12 34>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <10>;
+            layers = <0>;
         };
 
         paste {
             bindings = <&kp LG(V)>;
             key-positions = <13 34>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <10>;
+            layers = <0>;
         };
 
         undo {
             bindings = <&kp LG(Z)>;
             key-positions = <34 14>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <10>;
+            layers = <0>;
         };
 
         connectivity {
@@ -109,10 +97,10 @@
 
         base {
             bindings = <
-&kp Q             &kp W           &kp E               &kp R           &kp T  &kp Y        &kp U           &kp I            &kp O                &kp P                        &tog 4
-&hm LEFT_SHIFT A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_GUI F  &kp G  &kp H        &hm LEFT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm LEFT_SHIFT SINGLE_QUOTE
-&hm LEFT_GUI Z    &kp X           &kp C               &kp V           &kp B  &kp N        &kp M           &kp COMMA        &kp PERIOD           &kp SLASH
-&kp N0            &mo 0           &kp ENTER           &lt 2 SPACE            &lt 1 ENTER                  &kp RIGHT_SHIFT  &mo 3                &kp N0
+&kp Q   &kp W  &kp E      &kp R        &kp T  &kp Y        &kp U  &kp I            &kp O       &kp P      &tog 0
+&kp A   &kp S  &kp D      &kp F        &kp G  &kp H        &kp J  &kp K            &kp L       &kp SQT
+&kp Z   &kp X  &kp C      &kp V        &kp B  &kp N        &kp M  &kp COMMA        &kp PERIOD  &kp SLASH
+&kp N0  &mo 0  &kp ENTER  &lt 2 SPACE         &lt 1 ENTER         &kp RIGHT_SHIFT  &mo 3       &kp N0
             >;
         };
 
@@ -140,24 +128,6 @@
 &trans          &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans
 &trans          &trans  &trans  &trans  &trans  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &out OUT_TOG  &trans
 &kp N0          &trans  &trans  &trans          &trans                      &trans        &trans        &kp N0
-            >;
-        };
-
-        design {
-            bindings = <
-&trans              &figma_text     &kp R           &kp K      &kp LBKT  &trans           &trans  &trans  &trans  &trans  &trans
-&lt 2 V             &mt LEFT_GUI A  &mt LEFT_ALT D  &kp O      &kp RBKT  &trans           &trans  &trans  &trans  &trans
-&mt LEFT_GUI SPACE  &trans          &kp MINUS       &kp EQUAL  &kp FSLH  &trans           &trans  &trans  &trans  &trans
-&trans              &trans          &trans          &mo 5                &kp RIGHT_SHIFT          &trans  &trans  &trans
-            >;
-        };
-
-        design_num {
-            bindings = <
-&trans        &kp N7  &kp N8  &kp N9  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LGUI      &kp N4  &kp N5  &kp N6  &kp PG_UP      &trans  &trans  &trans  &trans  &trans
-&kp LEFT_GUI  &kp N1  &kp N2  &kp N3  &kp N0         &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans                 &trans          &trans  &trans  &trans
             >;
         };
     };
