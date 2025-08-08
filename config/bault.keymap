@@ -50,7 +50,7 @@
             key-positions = <34 11>;
             timeout-ms = <10>;
             require-prior-idle-ms = <10>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         cut {
@@ -58,7 +58,7 @@
             key-positions = <12 34>;
             timeout-ms = <10>;
             require-prior-idle-ms = <10>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         paste {
@@ -66,7 +66,7 @@
             key-positions = <13 34>;
             timeout-ms = <10>;
             require-prior-idle-ms = <10>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         undo {
@@ -74,12 +74,20 @@
             key-positions = <34 14>;
             timeout-ms = <10>;
             require-prior-idle-ms = <10>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         connectivity {
             bindings = <&mo 3>;
             key-positions = <33 36>;
+        };
+
+        redo {
+            bindings = <&kp LG(LS(Z))>;
+            key-positions = <34 14 11>;
+            timeout-ms = <10>;
+            require-prior-idle-ms = <10>;
+            layers = <0 2>;
         };
     };
 
@@ -106,19 +114,19 @@
 
         num {
             bindings = <
-&none                    &kp LS(LGUI)  &kp LBKT  &kp RBKT           &kp BACKSLASH  &none   &kp GRAVE  &kp MINUS  &kp EQUAL  &none               &none
-&hm LEFT_SHIFT NUMBER_1  &kp N2        &kp N3    &hm LEFT_SHIFT N4  &kp N5         &kp N6  &kp N7     &kp N8     &kp N9     &hm RIGHT_SHIFT N0
-&kp LEFT_ALT             &none         &none     &none              &none          &none   &none      &trans     &trans     &trans
-&none                    &none         &none     &trans                            &trans             &trans     &none      &none
+&none         &kp LS(LGUI)  &kp LBKT  &kp RBKT  &kp BACKSLASH  &none   &kp GRAVE  &kp MINUS  &kp EQUAL  &none   &none
+&kp N1        &kp N2        &kp N3    &kp N4    &kp N5         &kp N6  &kp N7     &kp N8     &kp N9     &kp N0
+&sk LEFT_ALT  &sk LEFT_GUI  &none     &none     &none          &none   &none      &trans     &trans     &trans
+&none         &none         &none     &trans                   &trans             &trans     &none      &none
             >;
         };
 
         nav {
             bindings = <
-&trans            &kp HOME  &kp UP    &kp END    &trans  &kp F10  &kp F7  &kp F8  &kp F9  &trans  &trans
-&kp LEFT_GUI      &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans
-&kp LS(LEFT_GUI)  &trans    &trans    &trans     &trans  &kp F12  &kp F1  &kp F2  &kp F3  &trans
-&trans            &trans    &trans    &trans             &trans           &trans  &trans  &trans
+&trans    &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &none   &none      &none      &none     &trans    &trans
+&kp LEFT  &kp DOWN  &kp UP         &kp RIGHT  &sk ENTER  &none   &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI
+&sk ESC   &trans    &trans         &trans     &trans     &none   &none      &none      &none     &trans
+&trans    &trans    &trans         &trans                &trans             &trans     &trans    &trans
             >;
         };
 
