@@ -89,6 +89,16 @@
             require-prior-idle-ms = <10>;
             layers = <0 2>;
         };
+
+        lshift {
+            bindings = <&sk LSHFT>;
+            key-positions = <13 12>;
+        };
+
+        rshift {
+            bindings = <&sk RSHFT>;
+            key-positions = <19 18>;
+        };
     };
 
     macros {
