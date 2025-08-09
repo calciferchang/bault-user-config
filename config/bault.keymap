@@ -161,6 +161,16 @@
             bindings = <&sl 6>;
             key-positions = <3 34>;
         };
+
+        capsword {
+            bindings = <&caps_word>;
+            key-positions = <1 8>;
+        };
+
+        capslock {
+            bindings = <&kp CAPS>;
+            key-positions = <2 7>;
+        };
     };
 
     keymap {
