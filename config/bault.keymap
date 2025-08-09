@@ -78,7 +78,7 @@
         };
 
         connectivity {
-            bindings = <&mo 0>;
+            bindings = <&mo 6>;
             key-positions = <33 36>;
         };
 
