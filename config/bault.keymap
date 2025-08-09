@@ -44,7 +44,7 @@
             bindings = <&kp RPAR>;
             key-positions = <7 6>;
         };
-        
+
         lgui {
             bindings = <&sk LEFT_GUI>;
             key-positions = <11 14>;
@@ -168,10 +168,10 @@
 
         base {
             bindings = <
-&kp Q   &kp W  &kp E  &kp R        &kp T  &kp Y        &kp U  &kp I            &kp O       &kp P      &tog 0
-&kp A   &kp S  &kp D  &kp F        &kp G  &kp H        &kp J  &kp K            &kp L       &kp SQT
-&kp Z   &kp X  &kp C  &kp V        &kp B  &kp N        &kp M  &kp COMMA        &kp PERIOD  &kp SLASH
-&kp N0  &none  &mo 2  &lt 3 SPACE         &lt 1 ENTER         &kp RIGHT_SHIFT  &none       &kp N0
+&kp Q           &kp W           &kp E               &kp R           &kp T  &kp Y        &kp U  &kp I            &kp O       &kp P      &tog 0
+&hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_GUI F  &kp G  &kp H        &kp J  &kp K            &kp L       &kp SQT
+&kp Z           &kp X           &kp C               &kp V           &kp B  &kp N        &kp M  &kp COMMA        &kp PERIOD  &kp SLASH
+&kp N0          &none           &mo 2               &lt 3 SPACE            &lt 1 ENTER         &kp RIGHT_SHIFT  &none       &kp N0
             >;
         };
 
