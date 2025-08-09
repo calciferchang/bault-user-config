@@ -44,36 +44,77 @@
             bindings = <&kp RPAR>;
             key-positions = <7 6>;
         };
+        
+        lgui {
+            bindings = <&sk LEFT_GUI>;
+            key-positions = <11 14>;
+        };
+
+        lessthan {
+            timeout-ms = <20>;
+            bindings = <&kp LT>;
+            key-positions = <1 3>;
+        };
+
+        greaterthan {
+            timeout-ms = <20>;
+            bindings = <&kp GT>;
+            key-positions = <8 6>;
+        };
+
+        lbrace {
+            timeout-ms = <20>;
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <1 14>;
+        };
+
+        rbrace {
+            timeout-ms = <20>;
+            bindings = <&kp RBRC>;
+            key-positions = <17 8>;
+        };
+
+        semi {
+            timeout-ms = <20>;
+            bindings = <&kp SEMI>;
+            key-positions = <20 18>;
+        };
+
+        colon {
+            timeout-ms = <20>;
+            bindings = <&kp COLON>;
+            key-positions = <17 19>;
+        };
 
         copy {
             bindings = <&kp LG(C)>;
             key-positions = <34 11>;
-            timeout-ms = <10>;
-            require-prior-idle-ms = <10>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
 
         cut {
             bindings = <&kp LG(X)>;
             key-positions = <12 34>;
-            timeout-ms = <10>;
-            require-prior-idle-ms = <10>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
 
         paste {
             bindings = <&kp LG(V)>;
             key-positions = <13 34>;
-            timeout-ms = <10>;
-            require-prior-idle-ms = <10>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
 
         undo {
             bindings = <&kp LG(Z)>;
             key-positions = <34 14>;
-            timeout-ms = <10>;
-            require-prior-idle-ms = <10>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
 
@@ -85,8 +126,8 @@
         redo {
             bindings = <&kp LG(LS(Z))>;
             key-positions = <34 14 11>;
-            timeout-ms = <10>;
-            require-prior-idle-ms = <10>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
 
@@ -101,6 +142,7 @@
         };
 
         esc {
+            timeout-ms = <20>;
             bindings = <&kp ESC>;
             key-positions = <1 34>;
         };
@@ -118,50 +160,6 @@
         productivity {
             bindings = <&sl 6>;
             key-positions = <3 34>;
-        };
-
-        lgui {
-            bindings = <&sk LEFT_GUI>;
-            key-positions = <11 14>;
-        };
-
-        lessthan {
-            bindings = <&kp LT>;
-            key-positions = <1 3>;
-        };
-
-        greaterthan {
-            bindings = <&kp GT>;
-            key-positions = <8 6>;
-        };
-
-        lbrace {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <1 14>;
-        };
-
-        rbrace {
-            bindings = <&kp RBRC>;
-            key-positions = <17 8>;
-        };
-
-        semi {
-            bindings = <&kp SEMI>;
-            key-positions = <20 18>;
-        };
-
-        colon {
-            bindings = <&kp COLON>;
-            key-positions = <17 19>;
-        };
-    };
-
-    macros {
-        figma_text: figma_text {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp T &tog 0>;
-            label = "FIGMA_TEXT";
         };
     };
 
