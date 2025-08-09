@@ -78,7 +78,7 @@
         };
 
         connectivity {
-            bindings = <&mo 6>;
+            bindings = <&mo 7>;
             key-positions = <33 36>;
         };
 
@@ -154,21 +154,21 @@
             >;
         };
 
+        gettin_funcy {
+            bindings = <
+&none  &kp F8  &kp F9  &kp F10  &kp F11  &none  &none      &none      &none     &none     &none
+&none  &kp F4  &kp F5  &kp F6   &kp F12  &none  &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI
+&none  &kp F1  &kp F2  &kp F3   &kp F13  &none  &none      &none      &none     &none
+&none  &none   &none   &none             &none             &none      &none     &none
+            >;
+        };
+
         productivity {
             bindings = <
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none         &none         &none  &none  &none
-            >;
-        };
-
-        gettin_funcy {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans          &trans          &trans  &trans  &trans
             >;
         };
 
