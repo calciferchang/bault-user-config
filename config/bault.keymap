@@ -104,6 +104,26 @@
             bindings = <&kp ESC>;
             key-positions = <1 34>;
         };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 18>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <14 13>;
+        };
+
+        productivity {
+            bindings = <&sl 6>;
+            key-positions = <3 34>;
+        };
+
+        lgui {
+            bindings = <&sk LEFT_GUI>;
+            key-positions = <11 14>;
+        };
     };
 
     macros {
