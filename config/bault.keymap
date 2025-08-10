@@ -165,11 +165,15 @@
         capsword {
             bindings = <&caps_word>;
             key-positions = <1 8>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <20>;
         };
 
         capslock {
             bindings = <&kp CAPS>;
             key-positions = <2 7>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <20>;
         };
     };
 
