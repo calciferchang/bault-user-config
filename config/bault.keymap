@@ -193,7 +193,7 @@
 
         tilde {
             bindings = <&kp LS(GRAVE)>;
-            key-positions = <9 8>;
+            key-positions = <9 7>;
             timeout-ms = <20>;
             require-prior-idle-ms = <20>;
         };
