@@ -48,10 +48,12 @@
         lgui {
             bindings = <&sk LEFT_GUI>;
             key-positions = <11 14>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <20>;
         };
 
         lessthan {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             bindings = <&kp LT>;
             key-positions = <1 3>;
             require-prior-idle-ms = <20>;
@@ -59,23 +61,25 @@
         };
 
         greaterthan {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             bindings = <&kp GT>;
             key-positions = <8 6>;
         };
 
         lbrace {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             bindings = <&kp LEFT_BRACE>;
             key-positions = <1 14>;
             layers = <0>;
+            require-prior-idle-ms = <20>;
         };
 
         rbrace {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             bindings = <&kp RBRC>;
             key-positions = <17 8>;
             layers = <0>;
+            require-prior-idle-ms = <20>;
         };
 
         semi {
@@ -93,7 +97,7 @@
         copy {
             bindings = <&kp LG(C)>;
             key-positions = <34 11>;
-            timeout-ms = <15>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
@@ -101,7 +105,7 @@
         cut {
             bindings = <&kp LG(X)>;
             key-positions = <12 34>;
-            timeout-ms = <15>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
@@ -109,7 +113,7 @@
         paste {
             bindings = <&kp LG(V)>;
             key-positions = <13 34>;
-            timeout-ms = <15>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
@@ -117,7 +121,7 @@
         undo {
             bindings = <&kp LG(Z)>;
             key-positions = <34 14>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
@@ -130,7 +134,7 @@
         redo {
             bindings = <&kp LG(LS(Z))>;
             key-positions = <34 14 11>;
-            timeout-ms = <15>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
@@ -139,25 +143,27 @@
             bindings = <&sk LSHFT>;
             key-positions = <13 12>;
             require-prior-idle-ms = <20>;
-            timeout-ms = <20>;
+            timeout-ms = <25>;
         };
 
         rshift {
             bindings = <&sk RSHFT>;
             key-positions = <19 18>;
-            timeout-ms = <20>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <20>;
         };
 
         esc {
-            timeout-ms = <20>;
+            timeout-ms = <40>;
             bindings = <&kp ESC>;
             key-positions = <1 34>;
+            require-prior-idle-ms = <30>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <17 18>;
+            require-prior-idle-ms = <30>;
         };
 
         enter {
@@ -168,54 +174,57 @@
         productivity {
             bindings = <&sl 5>;
             key-positions = <3 34>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <40>;
+            layers = <0>;
         };
 
         capsword {
             bindings = <&caps_word>;
             key-positions = <1 8>;
-            timeout-ms = <15>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <20>;
         };
 
         capslock {
             bindings = <&kp CAPS>;
             key-positions = <2 7>;
-            timeout-ms = <15>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <20>;
         };
 
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <9 8>;
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <20>;
         };
 
         tilde {
             bindings = <&kp LS(GRAVE)>;
             key-positions = <9 7>;
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <20>;
         };
 
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <1 0>;
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <20>;
         };
 
         pipe {
             bindings = <&kp LS(BACKSLASH)>;
             key-positions = <0 2>;
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <20>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <34 2>;
-            timeout-ms = <15>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
