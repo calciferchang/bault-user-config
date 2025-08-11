@@ -15,16 +15,15 @@
             require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
         };
-        
-      skq: sticky_key_quick_release {
-        compatible = "zmk,behavior-sticky-key";
-        #binding-cells = <1>;
-        bindings = <&kp>;
-        release-after-ms = <1000>;
-        quick-release;
-        ignore-modifiers;
-      };
 
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+            ignore-modifiers;
+        };
     };
 
     combos {
@@ -55,7 +54,7 @@
         };
 
         lgui {
-            bindings = <&sk LEFT_GUI>;
+            bindings = <&skq LEFT_GUI>;
             key-positions = <11 14>;
             timeout-ms = <30>;
             require-prior-idle-ms = <20>;
@@ -149,14 +148,14 @@
         };
 
         lshift {
-            bindings = <&sk LSHFT>;
+            bindings = <&skq LSHFT>;
             key-positions = <13 12>;
             require-prior-idle-ms = <20>;
             timeout-ms = <25>;
         };
 
         rshift {
-            bindings = <&sk RSHFT>;
+            bindings = <&skq RSHFT>;
             key-positions = <19 18>;
             timeout-ms = <25>;
             require-prior-idle-ms = <20>;
@@ -255,15 +254,15 @@
             bindings = <
 &kp LS(EXCL)  &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)    &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp MINUS  &kp EQUAL  &none
 &kp N1        &kp N2        &kp N3         &kp N4          &kp N5         &kp N6         &kp N7        &kp N8        &kp N9     &kp N0
-&sk LEFT_ALT  &sk LEFT_GUI  &none          &none           &none          &none          &none         &trans        &trans     &trans
-&none         &none         &none          &sk LEFT_SHIFT                 &trans                       &trans        &none      &none
+&sk LEFT_ALT  &skq LEFT_GUI  &none          &none           &none          &none          &none         &trans        &trans     &trans
+&none         &none         &none          &skq LEFT_SHIFT                 &trans                       &trans        &none      &none
             >;
         };
 
         numpad {
             bindings = <
 &none     &kp LS(LT)  &kp LS(GT)  &kp EQUAL  &none    &none         &kp N7  &kp N8  &kp N9  &kp LS(PLUS)  &none
-&sk LGUI  &sk LALT    &sk LCTRL   &sk LSHFT  &kp TAB  &kp LS(STAR)  &kp N4  &kp N5  &kp N6  &kp MINUS
+&skq LGUI  &skq LALT    &skq LCTRL   &skq LSHFT  &kp TAB  &kp LS(STAR)  &kp N4  &kp N5  &kp N6  &kp MINUS
 &kp LBKT  &none       &kp COMMA   &kp RBKT   &none    &kp DOT       &kp N1  &kp N2  &kp N3  &kp SLASH
 &none     &none       &none       &none               &kp N0                &none   &none   &none
             >;
@@ -272,7 +271,7 @@
         nav {
             bindings = <
 &trans      &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &none   &none      &none      &none     &trans    &trans
-&kp LEFT    &kp DOWN  &kp UP         &kp RIGHT  &kp ENTER  &none   &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI
+&kp LEFT    &kp DOWN  &kp UP         &kp RIGHT  &kp ENTER  &none   &skq RSHFT  &skq RCTRL  &skq RALT  &skq RGUI
 &kp ESCAPE  &trans    &trans         &trans     &trans     &none   &none      &none      &none     &trans
 &trans      &trans    &trans         &trans                &trans             &trans     &trans    &trans
             >;
@@ -281,7 +280,7 @@
         gettin_funcy {
             bindings = <
 &none  &kp F8  &kp F9  &kp F10  &kp F11  &none  &none      &none      &none     &none     &none
-&none  &kp F4  &kp F5  &kp F6   &kp F12  &none  &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI
+&none  &kp F4  &kp F5  &kp F6   &kp F12  &none  &skq RSHFT  &skq RCTRL  &skq RALT  &skq RGUI
 &none  &kp F1  &kp F2  &kp F3   &kp F13  &none  &none      &none      &none     &none
 &none  &none   &none   &none             &none             &none      &none     &none
             >;
