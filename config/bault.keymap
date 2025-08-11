@@ -61,7 +61,7 @@
         };
 
         lessthan {
-            timeout-ms = <30>;
+            timeout-ms = <25>;
             bindings = <&kp LT>;
             key-positions = <1 3>;
             require-prior-idle-ms = <20>;
@@ -69,13 +69,13 @@
         };
 
         greaterthan {
-            timeout-ms = <30>;
+            timeout-ms = <25>;
             bindings = <&kp GT>;
             key-positions = <8 6>;
         };
 
         lbrace {
-            timeout-ms = <30>;
+            timeout-ms = <25>;
             bindings = <&kp LEFT_BRACE>;
             key-positions = <1 14>;
             layers = <0>;
@@ -83,7 +83,7 @@
         };
 
         rbrace {
-            timeout-ms = <30>;
+            timeout-ms = <25>;
             bindings = <&kp RBRC>;
             key-positions = <17 8>;
             layers = <0>;
