@@ -16,11 +16,6 @@
             flavor = "tap-preferred";
         };
     };
-    
-    &sk {
-        release-after-ms = <2000>;
-        quick-release;
-    };
 
     combos {
         compatible = "zmk,combos";
@@ -89,7 +84,7 @@
         semi {
             timeout-ms = <20>;
             bindings = <&kp SEMI>;
-            key-positions = <20 18>;
+            key-positions = <12 14>;
         };
 
         colon {
@@ -186,14 +181,14 @@
         capsword {
             bindings = <&caps_word>;
             key-positions = <1 8>;
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             require-prior-idle-ms = <20>;
         };
 
         capslock {
             bindings = <&kp CAPS>;
             key-positions = <2 7>;
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             require-prior-idle-ms = <20>;
         };
 
@@ -207,7 +202,7 @@
         tilde {
             bindings = <&kp LS(GRAVE)>;
             key-positions = <9 7>;
-            timeout-ms = <30>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <20>;
         };
 
