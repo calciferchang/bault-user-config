@@ -17,6 +17,11 @@
             flavor = "tap-preferred";
         };
     };
+    
+    &sk {
+        release-after-ms = <2000>;
+        quick-release;
+    };
 
     combos {
         compatible = "zmk,combos";
