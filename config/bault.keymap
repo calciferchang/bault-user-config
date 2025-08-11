@@ -105,7 +105,7 @@
         copy {
             bindings = <&kp LG(C)>;
             key-positions = <34 11>;
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
@@ -113,7 +113,7 @@
         cut {
             bindings = <&kp LG(X)>;
             key-positions = <12 34>;
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
@@ -121,7 +121,7 @@
         paste {
             bindings = <&kp LG(V)>;
             key-positions = <13 34>;
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
@@ -129,7 +129,7 @@
         undo {
             bindings = <&kp LG(Z)>;
             key-positions = <34 14>;
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <20>;
             layers = <0 3>;
         };
