@@ -285,6 +285,15 @@
         };
     };
 
+    macros {
+        sappy: sappy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp S &kp A &kp P &kp P &kp Y>;
+            label = "SAPPY";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
