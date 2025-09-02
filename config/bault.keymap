@@ -154,7 +154,7 @@
             key-positions = <34 11>;
             timeout-ms = <40>;
             require-prior-idle-ms = <20>;
-            layers = <0 3>;
+            layers = <0 2>;
         };
 
         cut {
@@ -162,7 +162,7 @@
             key-positions = <12 34>;
             timeout-ms = <40>;
             require-prior-idle-ms = <20>;
-            layers = <0 3>;
+            layers = <0 2>;
         };
 
         paste {
@@ -170,7 +170,7 @@
             key-positions = <13 34>;
             timeout-ms = <40>;
             require-prior-idle-ms = <20>;
-            layers = <0 3>;
+            layers = <0 2>;
         };
 
         undo {
@@ -178,11 +178,11 @@
             key-positions = <34 14>;
             timeout-ms = <40>;
             require-prior-idle-ms = <20>;
-            layers = <0 3>;
+            layers = <0 2>;
         };
 
         connectivity {
-            bindings = <&mo 6>;
+            bindings = <&mo 5>;
             key-positions = <33 36>;
         };
 
@@ -191,7 +191,7 @@
             key-positions = <34 14 11>;
             timeout-ms = <50>;
             require-prior-idle-ms = <20>;
-            layers = <0 3>;
+            layers = <0 2>;
         };
 
         lshift {
@@ -227,7 +227,7 @@
         };
 
         productivity {
-            bindings = <&sl 5>;
+            bindings = <&sl 4>;
             key-positions = <3 34>;
             timeout-ms = <40>;
             require-prior-idle-ms = <60>;
@@ -281,7 +281,7 @@
             key-positions = <34 2>;
             timeout-ms = <40>;
             require-prior-idle-ms = <20>;
-            layers = <0 3>;
+            layers = <0 2>;
         };
     };
 
@@ -302,34 +302,25 @@
 &kp Q            &kp W            &kp E                &kp R            &kp T  &kp Y             &kp U             &kp I         &kp O        &kp P      &tog 0
 &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_GUI F  &kp G  &kp H             &hmr RIGHT_GUI J  &hmr RCTRL K  &hmr RALT L  &kp SQT
 &kp Z            &kp X            &kp C                &kp V            &kp B  &kp N             &kp M             &kp COMMA     &kp PERIOD   &kp SLASH
-&kp N0           &mo 6            &sl 2                &lt 3 SPACE             &sblayer 1 ENTER                    &sl 4         &mo 6        &kp N0
+&kp N0           &mo 5            &sl 0                &lt 2 SPACE             &sblayer 1 ENTER                    &sl 3         &mo 5        &kp N0
             >;
         };
 
         num {
             bindings = <
-&kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(DLLR)     &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp MINUS  &kp EQUAL  &none
-&kp N1        &kp N2         &kp N3         &kp N4           &kp N5         &kp N6         &kp N7        &kp N8        &kp N9     &kp N0
-&sk LEFT_ALT  &skq LEFT_GUI  &none          &none            &none          &none          &none         &trans        &trans     &trans
-&none         &none          &none          &skq LEFT_SHIFT                 &trans                       &trans        &none      &none
-            >;
-        };
-
-        numpad {
-            bindings = <
-&none      &kp LS(LT)  &kp LS(GT)  &kp EQUAL   &none    &none         &kp N7  &kp N8  &kp N9  &kp LS(PLUS)  &none
-&skq LGUI  &skq LALT   &skq LCTRL  &skq LSHFT  &kp TAB  &kp LS(STAR)  &kp N4  &kp N5  &kp N6  &kp MINUS
-&kp LBKT   &none       &kp COMMA   &kp RBKT    &none    &kp DOT       &kp N1  &kp N2  &kp N3  &kp SLASH
-&none      &none       &none       &none                &kp N0                &none   &none   &none
+&kp LS(EXCL)            &kp LS(AT)          &kp LS(POUND)  &kp LS(DLLR)        &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp MINUS  &kp EQUAL  &none
+&hml LEFT_GUI NUMBER_1  &hml LALT NUMBER_2  &hml LCTRL N3  &hml LGUI NUMBER_4  &kp N5         &kp N6         &kp N7        &kp N8        &kp N9     &kp N0
+&sk LEFT_ALT            &skq LEFT_GUI       &none          &none               &none          &none          &none         &trans        &trans     &trans
+&none                   &none               &none          &skq LEFT_SHIFT                    &trans                       &trans        &none      &none
             >;
         };
 
         nav {
             bindings = <
-&trans      &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &none   &none       &none       &none      &trans     &trans
-&kp LEFT    &kp DOWN  &kp UP         &kp RIGHT  &kp ENTER  &none   &skq RSHFT  &skq RCTRL  &skq RALT  &skq RGUI
-&kp ESCAPE  &trans    &trans         &trans     &trans     &none   &none       &none       &none      &trans
-&trans      &trans    &trans         &trans                &trans              &trans      &trans     &trans
+&trans          &kp HOME        &kp PAGE_DOWN  &kp PG_UP        &kp END    &none   &kp N7  &kp N8  &kp N9  &kp MINUS     &trans
+&hml LGUI LEFT  &hml LALT DOWN  &hml LCTRL UP  &hml LGUI RIGHT  &kp ENTER  &none   &kp N4  &kp N5  &kp N6  &kp LS(PLUS)
+&kp ESCAPE      &trans          &trans         &trans           &trans     &none   &kp N1  &kp N2  &kp N3  &kp N0
+&trans          &trans          &trans         &trans                      &trans          &trans  &trans  &trans
             >;
         };
 
@@ -357,6 +348,15 @@
 &trans          &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans
 &trans          &trans  &trans  &trans  &trans  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &out OUT_TOG  &trans
 &kp N0          &trans  &trans  &trans          &trans                      &trans        &trans        &kp N0
+            >;
+        };
+
+        sym {
+            bindings = <
+&trans        &kp LA(LBKT)    &kp LA(RBKT)     &kp LA(MINUS)   &trans     &trans    &kp RA(RS(MINUS))  &kp RA(RS(RBKT))  &kp RA(RS(LBKT))  &trans          &trans
+&hml LGUI LT  &hml LALT LBKT  &hml LCTRL LBRC  &hml LGUI LPAR  &kp GRAVE  &kp BSLH  &hmr RGUI RPAR     &hmr RCTRL RBRC   &hmr RALT RBKT    &hmr RGUI RBKT
+&trans        &trans          &trans           &trans          &trans     &trans    &trans             &trans            &trans            &trans
+&trans        &trans          &trans           &trans                     &trans                       &trans            &trans            &trans
             >;
         };
     };
