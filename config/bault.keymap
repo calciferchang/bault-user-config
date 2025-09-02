@@ -128,7 +128,7 @@
         };
 
         connectivity {
-            bindings = <&mo 5>;
+            bindings = <&mo 6>;
             key-positions = <33 36>;
         };
 
@@ -157,7 +157,7 @@
         esc {
             timeout-ms = <40>;
             bindings = <&kp ESC>;
-            key-positions = <1 34>;
+            key-positions = <1 2>;
             require-prior-idle-ms = <30>;
         };
 
@@ -173,7 +173,7 @@
         };
 
         productivity {
-            bindings = <&sl 4>;
+            bindings = <&sl 5>;
             key-positions = <3 34>;
             timeout-ms = <40>;
             require-prior-idle-ms = <60>;
@@ -189,7 +189,7 @@
 
         capslock {
             bindings = <&kp CAPS>;
-            key-positions = <2 7>;
+            key-positions = <13 18 12 19>;
             timeout-ms = <35>;
             require-prior-idle-ms = <20>;
         };
@@ -224,7 +224,7 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <34 2>;
+            key-positions = <2 3>;
             timeout-ms = <40>;
             require-prior-idle-ms = <20>;
             layers = <0 2>;
@@ -248,7 +248,7 @@
 &kp Q            &kp W            &kp E                &kp R            &kp T  &kp Y             &kp U             &kp I         &kp O        &kp P      &tog 0
 &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_GUI F  &kp G  &kp H             &hmr RIGHT_GUI J  &hmr RCTRL K  &hmr RALT L  &kp SQT
 &kp Z            &kp X            &kp C                &kp V            &kp B  &kp N             &kp M             &kp COMMA     &kp PERIOD   &kp SLASH
-&kp N0           &mo 5            &sl 0                &lt 2 SPACE             &sblayer 1 ENTER                    &sl 3         &mo 5        &kp N0
+&kp N0           &mo 6            &mo 3                &lt 2 SPACE             &sblayer 1 ENTER                    &sl 4         &mo 6        &kp N0
             >;
         };
 
@@ -267,6 +267,15 @@
 &hml LGUI LEFT  &hml LALT DOWN  &hml LCTRL UP  &hml LGUI RIGHT  &kp ENTER  &none   &kp N4  &kp N5  &kp N6  &kp LS(PLUS)
 &kp ESCAPE      &trans          &trans         &trans           &trans     &none   &kp N1  &kp N2  &kp N3  &kp N0
 &trans          &trans          &trans         &trans                      &trans          &trans  &trans  &trans
+            >;
+        };
+
+        sym {
+            bindings = <
+&trans        &kp LA(LBKT)    &kp LA(RBKT)     &kp LA(MINUS)   &trans     &trans    &kp RA(RS(MINUS))  &kp RA(RS(RBKT))  &kp RA(RS(LBKT))  &trans        &trans
+&hml LGUI LT  &hml LALT LBKT  &hml LCTRL LBRC  &hml LGUI LPAR  &kp GRAVE  &kp BSLH  &hmr RGUI RPAR     &hmr RCTRL RBRC   &hmr RALT RBKT    &hmr RGUI GT
+&trans        &trans          &trans           &trans          &trans     &trans    &trans             &trans            &trans            &trans
+&trans        &trans          &trans           &trans                     &trans                       &trans            &trans            &trans
             >;
         };
 
@@ -294,15 +303,6 @@
 &trans          &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans
 &trans          &trans  &trans  &trans  &trans  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &out OUT_TOG  &trans
 &kp N0          &trans  &trans  &trans          &trans                      &trans        &trans        &kp N0
-            >;
-        };
-
-        sym {
-            bindings = <
-&trans        &kp LA(LBKT)    &kp LA(RBKT)     &kp LA(MINUS)   &trans     &trans    &kp RA(RS(MINUS))  &kp RA(RS(RBKT))  &kp RA(RS(LBKT))  &trans        &trans
-&hml LGUI LT  &hml LALT LBKT  &hml LCTRL LBRC  &hml LGUI LPAR  &kp GRAVE  &kp BSLH  &hmr RGUI RPAR     &hmr RCTRL RBRC   &hmr RALT RBKT    &hmr RGUI GT
-&trans        &trans          &trans           &trans          &trans     &trans    &trans             &trans            &trans            &trans
-&trans        &trans          &trans           &trans                     &trans                       &trans            &trans            &trans
             >;
         };
     };
